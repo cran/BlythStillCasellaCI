@@ -1,4 +1,11 @@
-3b4acb19eb9255ead2236934365a4844 *DESCRIPTION
-b2ddd29f4f44b08df89ca3af885b479b *NAMESPACE
-084af6fb159bb7252d1c8da06a91573d *R/blyth.still.casella.R
-4398a154f6266bc44f749f4b417088b4 *man/blyth.still.casella.Rd
+a6e35737fb71003383e0ea787ee298f3 *DESCRIPTION
+f5f7f089474499dca48232cca7122bff *NAMESPACE
+85b9448f97a92d67044cdeac019ae460 *R/blyth.still.casella.R
+d4621e8d37d092b87284f5859569b342 *R/calc.total.length.R
+3e978348217ecfe110664fd5a353e48a *R/evaluate.coverage.R
+5ca5deb18fc1bb83733c425deea4ae63 *R/evaluate.g.maximum.R
+d245991dde0807459a8e9b872f343d51 *R/find.endpoints.given.confidence.level.R
+7e6f596305647f63d7eadf7c3563b057 *R/g.R
+548207787b86e8e498702ed5f77919c0 *R/g.prime.R
+2bf27c0140d2ad2a303e75162928f011 *R/where.g.maximum.R
+858ef18a5d9782f41cbf703dd061a094 *man/blyth.still.casella.Rd

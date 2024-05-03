@@ -2,10 +2,16 @@
 % Please edit documentation in R/blyth.still.casella.R
 \name{blyth.still.casella}
 \alias{blyth.still.casella}
-\title{Blyth-Still-Casella exact binomial confidence intervals}
+\title{Blyth-Still-Casella Exact Binomial Confidence Intervals}
 \usage{
-blyth.still.casella(n, X = NULL, alpha = 0.05, digits = 2,
-  CIs.init = NULL, additional.info = FALSE)
+blyth.still.casella(
+  n,
+  X = NULL,
+  alpha = 0.05,
+  digits = 2,
+  CIs.init = NULL,
+  additional.info = FALSE
+)
 }
 \arguments{
 \item{n}{number of trials}
@@ -29,20 +35,19 @@ If \code{additional.info = FALSE}, only a list of confidence interval(s) will be
 If \code{additional.info = TRUE}, the following lists will be returned:
 
 \tabular{ll}{
-   \code{CI}                          \tab a list of confidence intervals \cr
-   \code{coinc.index}                 \tab indices of coincidental lower endpoints (L.Index) and their corresponding upper endpoints (U.index)\cr
-   \code{endpoint.type}               \tab whether the endpoint is coincidental (C) or non-coincidental (NC)\cr
-   \code{range}                       \tab range for each endpoint\cr
+\code{ConfidenceInterval}          \tab a list of confidence intervals \cr
+\code{CoincidenceEndpoint}         \tab indices of coincidental lower endpoints (L.Index) and their corresponding upper endpoints (U.index)\cr
+\code{Range}                       \tab range for each endpoint\cr
 }
 }
 \description{
-computes the Blyth-Still-Casella exact binomial confidence intervals based on a refining procedure proposed by George Casella (1986).
+\code{blyth.still.casella()} computes Blyth-Still-Casella exact binomial confidence intervals based on a refining procedure proposed by George Casella (1986).
 }
 \examples{
 # to obtain 95\% CIs for n = 30 and X = 0 to 30
 blyth.still.casella(n = 30, alpha = 0.05, digits = 4)
 
-# to obtain 90\% CIs, endpoint types, indices of coincidental enpoints (if any),
+# to obtain 90\% CIs, endpoint types, indices of coincidental endpoints (if any),
 # and range of each endpoint for n = 30 and X = 23
 blyth.still.casella(n = 30, X = 23, alpha = 0.05, digits = 4, additional.info = TRUE)
 
@@ -51,7 +56,4 @@ blyth.still.casella(n = 30, X = 23, alpha = 0.05, digits = 4, additional.info = 
 CIs.input <- matrix(c(0,1), nrow = 11, ncol = 2, byrow = TRUE) # start with [0,1] intervals
 blyth.still.casella(n = 10, alpha = 0.05, digits = 4, CIs.init = CIs.input, additional.info = TRUE)
 
-# use summary function to see the range for each endpoint
-output <- blyth.still.casella(n = 5, alpha = 0.1, digits = 4, additional.info = TRUE)
-summary(output)
 }
